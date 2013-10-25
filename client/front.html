@@ -1,0 +1,25 @@
+<html>
+<head>
+    <script language="javascript" type="text/javascript" src="lib/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    response here: <p id="lblResponse">fill me in</p>
+
+<script type="text/javascript">
+$(document).ready(function() {
+//http%3A%2F%2Flocalhost%3A8080:   http://localhost:8080
+
+$.ajax({
+		url:"proxy.php?url=http%3A%2F%2Flocalhost%3A8080",
+		type:'GET',
+		dataType:"json",
+		success:function(data){
+		console.log("succ");
+		console.log(data);
+		}
+	});
+});
+</script>
+
+</body>
+</html>
